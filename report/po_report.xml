@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>    
+    <template id="report_lec_purchase_id">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <div class="container fluid">
+                        <div class="row">
+                            <div class="col-4">
+                                Nama 
+                            </div>
+                            <div class="col-1">
+                                : 
+                            </div>
+                            <div class="col-7">
+                                <span t-field="o.penjual_id"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                Tanggal Pesanan
+                            </div>
+                            <div class="col-1">
+                                : 
+                            </div>
+                            <div class="col-7">
+                                <span t-field="o.tanggal_pesan"></span>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                            Jenis Pembayaran 
+                            </div>
+                            <div class="col-1">
+                                    : 
+                            </div>
+                            <div class="col-7">
+                                <span t-field="o.jenis_pembayaran"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                Jumlah Pesanan
+                            </div>
+                            <div class="col-1">
+                                : 
+                            </div>
+                            <div class="col-7">
+                                <span t-field="o.jumlah_po"></span>
+                            </div>  
+                        </div>
+
+                        <div class="row"> 
+                            <div class="col-4">
+                                Total Tagihan
+                            </div>
+                            <div class="col-1">
+                                : 
+                            </div>
+                            <div class="col-7">
+                                <span t-field="o.total_harga_po"></span>
+                            </div>                           
+                        </div>
+                </div>                    
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <table class="table table-striped table-bordered">
+                                <tr>     
+                                    <th>Nama Barang</th>
+                                    <th>Harga Barang</th>
+                                    <th>Jumlah Barang</th>
+                                    <th>Jumlah Harga</th>
+                                </tr>                                        
+                                <t t-set="nomor" t-value="1"/>
+                                <tr t-foreach="o.detail_jpo_ids" t-as="line">
+                                    <td><span t-esc = "line.nama_barang.name"/></td>
+                                    <td><span t-esc = "line.harga_po"/></td>
+                                    <td><span t-esc = "line.jumlah_barang_po"/></td>
+                                    <td><span t-esc = "line.jumlah_harga_po"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

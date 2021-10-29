@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_product_action" model="ir.actions.act_window">
+        <field name="name">Product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <menuitem
+        id="product_product_template_inherit_menu_act"
+        name="Product"
+        action="res_product_action"
+        parent="lec_inventory_menu_categ"
+        sequence="1"/>       
+</odoo>

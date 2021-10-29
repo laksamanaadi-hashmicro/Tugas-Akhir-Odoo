@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lec_sales,access.lec.sales,model_lec_sales,,1,1,1,1
+access_lec_detailso,access.lec.detailso,model_lec_detailso,,1,1,1,1
+access_lec_purchase,access.lec.purchase,model_lec_purchase,,1,1,1,1
+access_lec_detailpo,access.lec.detailpo,model_lec_detailpo,,1,1,1,1

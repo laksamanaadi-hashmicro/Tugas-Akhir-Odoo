@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+        <menuitem id="lec_menu_root" name="Laksamana Economic Chamber" sequence="10"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="lec_order_menu_categ" name="Order" 
+        parent='lec_menu_root' sequence="1"/>
+        <menuitem id="lec_inventory_menu_categ" name="Inventory" 
+        parent='lec_menu_root' sequence="2"/>
+        <menuitem id="lec_contact_menu_categ" name="Contact" 
+        parent='lec_menu_root' sequence="3"/>
+
+    </data>
+
+</odoo>

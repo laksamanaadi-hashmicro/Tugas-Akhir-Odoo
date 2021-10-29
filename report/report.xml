@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_lec_sales" model="ir.actions.report">
+        <field name="name">Order Sales Report</field>
+        <field name="model">lec.sales</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">laksamana_economic_chamber.report_lec_sales_id</field>
+        <field name="report_file">laksamana_economic_chamber.report_lec_sales_id</field>
+        <field name="binding_model_id" ref="model_lec_sales"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_lec_purchase" model="ir.actions.report">
+        <field name="name">Order Purchase Report</field>
+        <field name="model">lec.purchase</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">laksamana_economic_chamber.report_lec_purchase_id</field>
+        <field name="report_file">laksamana_economic_chamber.report_lec_purchase_id</field>
+        <field name="binding_model_id" ref="model_lec_purchase"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
